@@ -1,4 +1,3 @@
-%Hello Ray
 %Raymond Canchola
 %An introduction to Fractals
 %
