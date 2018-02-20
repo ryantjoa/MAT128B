@@ -3,7 +3,7 @@
 %The program enables us to show connectedness by stating if abs(orbit)<100 then it is connected
 %and the program returns a logic statement true = 1 or false = 0
 %%
-clear
+
 close all
 c = 1.25;           %User selects c value
 phi = @(z) z^2-c;
