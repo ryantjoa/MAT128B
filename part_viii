@@ -1,11 +1,15 @@
-x_start = -2;
+%Ryan
+%Problem 8
+
+
+x_start = -2;           %Start and ending points so we can construct a grid from the mandelbrot set
 x_end = 1;
 y_start = -1.5;
 y_end = 1.5;
 
 [x,y] = meshgrid(linspace(x_start, x_end, 1000), linspace(y_start, y_end, 1000));
 
-c = x + 1i * y;
+c = x + 1i * y;         %Defining C, k, and z for mandelbrot set
 k = zeros(size(c));
 z = zeros(size(c));
 
