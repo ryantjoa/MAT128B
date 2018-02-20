@@ -1,0 +1,20 @@
+x_start = -2;
+x_end = 1;
+y_start = -1.5;
+y_end = 1.5;
+
+[x,y] = meshgrid(linspace(x_start, x_end, 1000), linspace(y_start, y_end, 1000));
+
+c = x + 1i * y;
+k = zeros(size(c));
+z = zeros(size(c));
+
+for j = 1:50
+    z   = z.^2 + c;
+    k(abs(z)> 2 & k == 0) = 50 - j;
+end
+
+figure(2);
+imagesc(k),
+colormap jet
+axis xy
