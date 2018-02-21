@@ -5,8 +5,8 @@
 %%
 
 close all
-c = 1.25;           %User selects c value
-phi = @(z) z^2-c;
+c = -1.25;           %User selects c value
+phi = @(z) z^2+c;
 
 orbit = 0;
 
