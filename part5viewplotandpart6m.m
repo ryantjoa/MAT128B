@@ -32,9 +32,6 @@ for j=1:a,
             end
         end
         
-        if abs(phi(orbit)) > 100                %If orbit=phi(orbit(0)) > 100 the points are disconnected. Hence, these points are outside of julia set and are not connected.
-            orbit = phi(orbit);                 %Here is where you grab the disconnected the points that are greater then the bound and color shade them
-        end 
     end
 end
 %% 
