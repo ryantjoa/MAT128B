@@ -5,8 +5,7 @@ a = 141;
 b = 361;
 
 orbit = 0;
-colormap([1 0.25 0; 1 1 1]);
-n = 1;
+colormap([1 0 0; 1 1 1]);
 M = 2*ones(a,b);
  
 
