@@ -1,43 +1,40 @@
-c = 0.36 + 0.1i;                %Don't need inline, all we need is the value of c
-zklist = [];                    %We need an empty set to hold the imageinery points 
-                                %so MATLAB can plot z_k+1
-for j=1:201, 
-    y = -1 + (j-1)*.01;         %I changed the iteration from i to k so MATLAB doesn't
-    for k=1:201                 %get confused on my imaginery variable "1i"
-        x = -1 + (k-1)*.01;     %set z_0 "zk" as an imaginery number x+1.i*y
-        zk = x+1i*y;            %We don't need fix points, so I took out flag1 and flag2
+%iii_Project
+%
+%The program is the inverse iteration method that plots the Julia set
+%%
+
+c = 0.36 + 0.1i;                %Defining c value            
+orbit_vector = [];              %Defining empty vector for plotting        
+                             
+for j=1:201 
+    y = -1 + (j-1)*.01;         %Defining x,y, and z values   
+    for k=1:201                 
+        x = -1 + (k-1)*.01;     
+        orbit = x+1i*y;            
         iteration = 0;              
         
-
-        while iteration < 100 && abs(zk) < 2 %I took out flag1 and 2 because we don't them in loop
+        while iteration < 100 && abs(orbit) < 2 
             iteration = iteration+1;
-            phi = zk-c;
+            phi = orbit-c;
             
-
-            x = real(phi);        %defined x and y as real and imaginery
+            x = real(phi);      %Seperating x as real and y as imaginary     
             y = imag(phi);
             r = sqrt((x^2+y^2));
-            theta = atan2(y,x); %I used atan2 because that gets the if else statement when
-                                %theta is less than 0
+            theta = atan2(y,x); %This function is fro x < 0 which adds pi
+            orbit = sqrt(r)*(cos(theta/2)+1i*sin(theta/2));
             
-
-            zk = sqrt(r)*(cos(theta/2)+1i*sin(theta/2));
-            
-
-            ran_num = randi(100,1,1); %defined a random number since phi has a random chance
-            m = 2;
-            if mod(ran_num,m) == 1;   %of being a negative or positive value then zk takes on that
-                zk = -zk;       %value
+            mod_num = 2;        %Defining random number for phi=+-sqrt(w-c)
+            ran_num = randi(100,1,1); 
+            if mod(ran_num,mod_num) == 1   
+                orbit = -orbit;       
             else
-                zk = zk;
+                orbit = orbit;
             end
         end    
-          zklist= [zklist,zk] ;  %vector to hold all the points collected from iteration
+          orbit_vector= [orbit_vector, orbit];   
         end
        
-
     end
     
-
-plot(zklist,'.')
+plot(orbit_vector,'.')
 axis xy
