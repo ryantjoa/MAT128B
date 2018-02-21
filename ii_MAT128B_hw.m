@@ -6,7 +6,8 @@
 %either phi(z) can stay bounded or increase towards indfinity.
 
 %%
-phi = @(z) z^2 + 0.36 + 0.1i;
+c = + 0.36 + 0.1i;
+phi = @(z) z^2 + c;
 fixpt1 = (1 + sqrt(6))/2;
 fixpt2 = (1 - sqrt(6))/2;
 colormap([1 0 0; 1 1 1]);
