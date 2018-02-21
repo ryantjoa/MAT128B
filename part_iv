@@ -1,6 +1,7 @@
 fprintf('The fractal dimension is a ratio comparing an object to its scale to which it is measured. In this case, we will say that the object is an image and the scale which it is measured is the boxes on a grid. When the object is shown on the grid, we can think of it as the object is touching a number of boxes on the grid. As we zoom in or out and look at the image, or the grid, the fractal dimension will scale to size, meaning the number of boxes touching the image will change depending if we zoom in or out. We can picture zooming in on a picture to the point where it begins to get blurry and we see individual pixels. By zooming in, the image intensity surface is quantized over a given space, and we see the result of this scaling. The fractal dimension scaling can be approximated by the equation D = log(N)/log(1/r) where N is the number of unique copies of a set A, and A is scaled down by a ratio of 1/r.')
 
 
+%Program_iv
 
 %The fractal dimension is a ratio comparing an object to its scale to which it is measured.
 %In this case, we will say that the object is an image and the scale which it is measured to
