@@ -1,5 +1,5 @@
-%iii_Project
-%
+%Part iii
+
 %The program is the inverse iteration method that plots the Julia set
 %%
 c = 0.36 + 0.1i;                %Defining c value            
