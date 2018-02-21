@@ -2,6 +2,7 @@
 Project 1
 
 Everyone worked on i and ii together.
+
 Ray worked on v and vii.
 Leigh worked on iii and vi.
 Ryan worked on iv and viii.
