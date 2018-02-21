@@ -4,8 +4,10 @@
 %Using the same algorithms developed for most of the project
 %I was able to construct the julia set using the newton's method on the
 %complex plane
+%Black is rt_1, cyan is rt_2, and magenta is rt_3
 %%
-phi = @(z) z^3+1;                    
+c = 1;
+phi = @(z) z^3+c;                    
 phi_prime = @(z) 3*z^2;
 
 rt_1 = -1;                   
@@ -13,7 +15,7 @@ rt_2 = exp(1i*pi/3);
 rt_3 = exp(-1i*5*pi/3);
 
 orbit = 0;
-colormap([1 0 0;0 1 0; 0 0 1; 1 1 1]);  
+colormap([0 0 0;0 1 1; 1 0 1; 1 1 1]);  
                                         
 M = 2*ones(141,361);                    
 
